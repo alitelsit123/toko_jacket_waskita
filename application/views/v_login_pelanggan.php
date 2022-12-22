@@ -27,7 +27,7 @@
                     echo form_open('pelanggan/login'); ?>
             
                     <div class="input-group mb-3">
-                        <input type="email" name="email" class="form-control" value="<?= set_value('email') ?>" placeholder="Email">
+                        <input type="text" name="email" class="form-control" value="<?= set_value('email') ?>" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>

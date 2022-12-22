@@ -14,7 +14,7 @@
                  <img src="<?= base_url() ?>template/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
              </div>
              <div class="info">
-                 <a href="#" class="d-block"><?= $this->session->userdata('nama_user') ?></a>
+                 <a href="#" class="d-block"><?= $this->session->userdata('username') ?></a>
              </div>
          </div>
 
@@ -35,7 +35,7 @@
                      </a>
                  </li>
 
-                 <li class="nav-item">
+                 <!-- <li class="nav-item">
                      <a href="<?= base_url('kategori') ?>" class="nav-link <?php if ($this->uri->segment(1) == 'kategori') {
                                                                                 echo "active";
                                                                             } ?>">
@@ -44,7 +44,7 @@
                              Kategori
                          </p>
                      </a>
-                 </li>
+                 </li> -->
 
                  <li class="nav-item">
                      <a href="<?= base_url('barang') ?>" class="nav-link <?php if ($this->uri->segment(1) == 'barang') {

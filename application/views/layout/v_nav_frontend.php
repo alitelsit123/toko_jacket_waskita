@@ -17,17 +17,6 @@
                      <a href="<?= base_url() ?>" class="nav-link">Home</a>
                  </li>
 
-                 <?php $kategori = $this->m_home->get_all_data_kategori(); ?>
-                 <li class="nav-item dropdown">
-                     <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Kategori</a>
-                     <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-
-                         <?php foreach ($kategori as $key => $value) { ?>
-                             <li><a href="<?= base_url('home/kategori/' . $value->id_kategori) ?>" class="dropdown-item"><?= $value->nama_kategori ?></a></li>
-                         <?php } ?>
-
-                     </ul>
-                 </li>
 
                  <li class="nav-item">
                      <a href="<?= base_url('home/cara_beli') ?>" class="nav-link">Cara Beli</a>

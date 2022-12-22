@@ -6,7 +6,7 @@ class M_barang extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_barang');
-        $this->db->join('tbl_kategori','tbl_kategori.id_kategori = tbl_barang.id_kategori','left');
+        // $this->db->join('tbl_kategori','tbl_kategori.id_kategori = tbl_barang.id_kategori','left');
         $this->db->order_by('id_barang','desc');
         return $this->db->get()->result();
     }
@@ -15,7 +15,7 @@ class M_barang extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_barang');
-        $this->db->join('tbl_kategori','tbl_kategori.id_kategori = tbl_barang.id_kategori','left');
+        // $this->db->join('tbl_kategori','tbl_kategori.id_kategori = tbl_barang.id_kategori','left');
         $this->db->where('id_barang', $id_barang);
         return $this->db->get()->row();
     }

@@ -7,6 +7,10 @@ class Admin extends CI_Controller
     {
         
         parent::__construct();
+				$user = $this->session->userdata('username');
+				if(!$user) {
+					redirect('auth/login_user');
+				}
         $this->load->model('m_admin');
         $this->load->model('m_pesanan_masuk');
         $this->load->model('m_barang');
@@ -21,7 +25,7 @@ class Admin extends CI_Controller
             'pesanan_kirim' => $this->m_admin->pesanan_kirim(),
             'pesanan_selesai' => $this->m_admin->pesanan_selesai(),
             'total_barang' => $this->m_admin->total_barang(),
-            'total_kategori' => $this->m_admin->total_kategori(),
+            // 'total_kategori' => $this->m_admin->total_kategori(),
             'isi'   => 'admin/v_admin',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);

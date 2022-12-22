@@ -10,7 +10,19 @@ class M_auth extends CI_Model
             'username' => $username,
             'password' => $password
         ));
-        return $this->db->get()->row();
+				$cek = $this->db->get()->row();
+				if($cek) {
+					$id_pelanggan = $cek->id_user;
+					$nama_pelanggan = $cek->nama_user;
+					$email = $cek->username;
+					$level_user = $cek->level_user;
+					$this->session->set_userdata('id_admin', $id_pelanggan);
+					$this->session->set_userdata('nama_admin', $nama_pelanggan);
+					$this->session->set_userdata('username', $email);
+					redirect('admin');
+				}
+				$this->session->set_flashdata('error','email atau password salah');
+				redirect('auth/login_user');
     }
 
     public function login_pelanggan($email, $password)

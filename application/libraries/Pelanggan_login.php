@@ -24,7 +24,19 @@ class Pelanggan_login
             $this->ci->session->set_userdata('email', $email);
             redirect('home');
         }else{
-            $this->ci->session->set_flashdata('error','email atau password salah');
+						$cek = $this->ci->m_auth->login_user($email, $password);
+						if($cek) {
+							$id_pelanggan = $cek->id_user;
+							$nama_pelanggan = $cek->nama_user;
+							$email = $cek->username;
+							$level_user = $cek->level_user;
+							$this->ci->session->set_userdata('id_admin', $id_pelanggan);
+							$this->ci->session->set_userdata('nama_admin', $nama_pelanggan);
+							$this->ci->session->set_userdata('username', $email);
+							redirect('admin');
+						}
+            
+						$this->ci->session->set_flashdata('error','email atau password salah');
             redirect('pelanggan/login');
         }
     }

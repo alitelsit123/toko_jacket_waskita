@@ -26,7 +26,7 @@ class Barang extends CI_Controller
     {
 
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required', array('required' => '%s Harus Di Isi !!'));
-        $this->form_validation->set_rules('id_kategori', 'Kategori', 'required', array('required' => '%s Harus Di Isi !!'));
+        // $this->form_validation->set_rules('id_kategori', 'Kategori', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('harga', 'Harga', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('total_stok', 'Stok', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('berat', 'Berat', 'required', array('required' => '%s Harus Di Isi !!'));
@@ -84,7 +84,7 @@ class Barang extends CI_Controller
 
 
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required', array('required' => '%s Harus Di Isi !!'));
-        $this->form_validation->set_rules('id_kategori', 'Kategori', 'required', array('required' => '%s Harus Di Isi !!'));
+        // $this->form_validation->set_rules('id_kategori', 'Kategori', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('harga', 'Harga', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('total_stok', 'Stok', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('berat', 'Berat', 'required', array('required' => '%s Harus Di Isi !!'));

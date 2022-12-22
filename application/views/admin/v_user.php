@@ -98,7 +98,7 @@
                     <label>Level</label>
                     <select name="level_user" class="form-control" required>
                         <option value="1" selected>Admin</option>
-                        <option value="2">User</option>
+                        <!-- <option value="2">User</option> -->
                     </select>
                 </div>
 

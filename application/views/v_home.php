@@ -49,10 +49,10 @@
                     
                     ?>
                     <div class="card bg-light">
-                        <div class="card-header text-muted border-bottom-0">
+                        <!-- <div class="card-header text-muted border-bottom-0">
                             <h2 class="lead"><b><?= $value->nama_barang ?></b></h2>
                             <p class="text-muted text-sm"><b>Kategori: </b> <?= $value->nama_kategori ?></p>
-                        </div>
+                        </div> -->
                         <div class="card-body pt-0">
                             <div class="row">
                                 <div class="col-12 text-center">

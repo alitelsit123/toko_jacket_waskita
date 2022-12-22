@@ -73,7 +73,7 @@
 
 <div class="col-lg-3 col-6">
     <!-- small box -->
-    <div class="small-box bg-danger">
+    <!-- <div class="small-box bg-danger">
         <div class="inner">
             <h3><?= $total_kategori ?></h3>
 
@@ -83,5 +83,5 @@
             <i class="fas fa-list"></i>
         </div>
         <a href="<?= base_url('kategori') ?>" class="small-box-footer">Info <i class="fas fa-arrow-circle-right"></i></a>
-    </div>
+    </div> -->
 </div>

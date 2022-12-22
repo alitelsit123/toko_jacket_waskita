@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <!-- <div class="col-sm-4">
                     <div class="form-group">
                         <label>Kategori</label>
                         <select name="id_kategori" class="form-control">
@@ -40,7 +40,7 @@
                             <?php } ?>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-sm-4">
                     <!-- text input -->
                     <div class="form-group">
