@@ -93,4 +93,25 @@ class Pelanggan extends CI_Controller
         );
         $this->load->view('layout/v_wrapper_backend',$data, FALSE);
     }
+
+    public function delete ($id_pelanggan = NULL)
+    {
+        $data=array('id_pelanggan' => $id_pelanggan);
+        $this->m_pelanggan->delete($data);
+        $this->session->set_flashdata('pesan','Data Berhasil di Hapus !');
+        redirect('pelanggan');
+    }
+
+    public function edit($id_pelanggan= NULL)
+    {
+        $data = array(
+            'id_pelanggan' => $id_pelanggan,
+            'nama_pelanggan' => $this->input->post('nama_pelanggan'),
+            'email' => $this->input->post('email'),
+            'password' => $this->input->post('password')
+        );
+        $this->m_pelanggan->edit($data);
+        $this->session->set_flashdata('pesan','Data Berhasil di edit !');
+        redirect('pelanggan');
+    }
 }

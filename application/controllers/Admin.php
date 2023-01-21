@@ -25,7 +25,6 @@ class Admin extends CI_Controller
             'pesanan_kirim' => $this->m_admin->pesanan_kirim(),
             'pesanan_selesai' => $this->m_admin->pesanan_selesai(),
             'total_barang' => $this->m_admin->total_barang(),
-            // 'total_kategori' => $this->m_admin->total_kategori(),
             'isi'   => 'admin/v_admin',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);

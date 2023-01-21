@@ -8,7 +8,6 @@ class Barang extends CI_Controller
         parent::__construct();
         $this->load->model('m_barang');
         $this->load->model('m_admin');
-        $this->load->model('m_kategori');
     }
 
     public function index()
@@ -26,7 +25,6 @@ class Barang extends CI_Controller
     {
 
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required', array('required' => '%s Harus Di Isi !!'));
-        // $this->form_validation->set_rules('id_kategori', 'Kategori', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('harga', 'Harga', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('total_stok', 'Stok', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('berat', 'Berat', 'required', array('required' => '%s Harus Di Isi !!'));
@@ -41,7 +39,6 @@ class Barang extends CI_Controller
             if (!$this->upload->do_upload($field_name)) {
                 $data = array(
                     'title' => 'Add Barang',
-                    'kategori' => $this->m_kategori->get_all_data(),
                     'error_upload' => $this->upload->display_errors(),
                     'isi'   => 'admin/barang/v_add',
                 );
@@ -53,7 +50,6 @@ class Barang extends CI_Controller
                 $this->load->library('image_lib', $config);
                 $data = array(
                     'nama_barang' => $this->input->post('nama_barang'),
-                    'id_kategori' => $this->input->post('id_kategori'),
                     'harga' => $this->input->post('harga'),
                     'total_stok' => $this->input->post('total_stok'),
                     'stok_s' => $this->input->post('stok_s'),
@@ -73,7 +69,6 @@ class Barang extends CI_Controller
         $data = array(
             'title' => 'Add Barang',
             'pesanan_masuk_notif' => $this->m_admin->pesanan_masuk_notif(),
-            'kategori' => $this->m_kategori->get_all_data(),
             'isi'   => 'admin/barang/v_add',
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
@@ -84,7 +79,6 @@ class Barang extends CI_Controller
 
 
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required', array('required' => '%s Harus Di Isi !!'));
-        // $this->form_validation->set_rules('id_kategori', 'Kategori', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('harga', 'Harga', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('total_stok', 'Stok', 'required', array('required' => '%s Harus Di Isi !!'));
         $this->form_validation->set_rules('berat', 'Berat', 'required', array('required' => '%s Harus Di Isi !!'));
@@ -99,7 +93,6 @@ class Barang extends CI_Controller
             if (!$this->upload->do_upload($field_name)) {
                 $data = array(
                     'title' => 'Edit Barang',
-                    'kategori' => $this->m_kategori->get_all_data(),
                     'barang' => $this->m_barang->get_data($id_barang),
                     'error_upload' => $this->upload->display_errors(),
                     'isi'   => 'admin/barang/v_edit',
@@ -120,7 +113,6 @@ class Barang extends CI_Controller
                 $data = array(
                     'id_barang' => $id_barang,
                     'nama_barang' => $this->input->post('nama_barang'),
-                    'id_kategori' => $this->input->post('id_kategori'),
                     'harga'       => $this->input->post('harga'),
                     'total_stok' => $this->input->post('total_stok'),
                     'stok_s' => $this->input->post('stok_s'),
@@ -139,7 +131,6 @@ class Barang extends CI_Controller
             $data = array(
                 'id_barang' => $id_barang,
                 'nama_barang' => $this->input->post('nama_barang'),
-                'id_kategori' => $this->input->post('id_kategori'),
                 'harga' => $this->input->post('harga'),
                 'total_stok' => $this->input->post('total_stok'),
                 'stok_s' => $this->input->post('stok_s'),
@@ -158,7 +149,6 @@ class Barang extends CI_Controller
         $data = array(
             'title' => 'Edit Barang',
             'pesanan_masuk_notif' => $this->m_admin->pesanan_masuk_notif(),
-            'kategori' => $this->m_kategori->get_all_data(),
             'barang' => $this->m_barang->get_data($id_barang),
             'isi'   => 'admin/barang/v_edit',
         );

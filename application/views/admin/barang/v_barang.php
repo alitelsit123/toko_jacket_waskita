@@ -29,7 +29,6 @@
                     <tr class="text-center">
                         <th class="text-center">No</th>
                         <th class="text-center">Nama Barang</th>
-                        <!-- <th class="text-center">kategori</th> -->
                         <th class="text-center">harga</th>
                         <th class="text-center">Stok Barang</th>
                         <th class="text-center">gambar</th>
@@ -45,7 +44,6 @@
                                 <?= $value->nama_barang ?><br>
                                 Berat: <?= $value->berat ?> Gr
                             </td>
-                            <!-- <td class="text-center"><?= $value->nama_kategori ?></td> -->
                             <td class="text-center">Rp.<?= number_format($value->harga, 0) ?></td>
                             <td class="text-center">
                                <h5> Total Stok : <span class="badge bg-primary"><?= $value->total_stok ?></span></h5> <br>
