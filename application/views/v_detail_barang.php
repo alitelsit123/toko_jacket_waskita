@@ -71,11 +71,22 @@
                             <br>
                             <div>
                                 <h4 class="badge badge-warning">Stok Size S : <?= $barang->stok_s ?> | Stok Size M : <?= $barang->stok_m ?> | Stok Size L : <?= $barang->stok_l ?> | Stok Size XL : <?= $barang->stok_xl ?></h4>
-                            </div>
+                            </div><br />
                         </div>
+						
                     </div>
                     <?php echo form_close() ?>
+					<?php if($this->session->flashdata('success')): ?>
+						<div class="alert alert-primary">
+						<?= $this->session->flashdata('success') ?>
+						</div>
+					<?php endif; ?>
 
+					<?php if($this->session->flashdata('error')): ?>
+					<div class="alert alert-danger">
+						<?= $this->session->flashdata('error') ?>
+					</div>
+					<?php endif; ?>
                 </div>
             </div>
         </div>
@@ -89,19 +100,20 @@
     <!-- SweetAlert2 -->
     <script src="<?= base_url() ?>template/plugins/sweetalert2/sweetalert2.min.js"></script>
     <script type="text/javascript">
-        $(function() {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000
-            });
+        // $(function() {
+        //     const Toast = Swal.mixin({
+        //         toast: true,
+        //         position: 'top-end',
+        //         showConfirmButton: false,
+        //         timer: 3000
+        //     });
 
-            $('.swalDefaultSuccess').click(function() {
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Data Berhasil DItambah Di Keranjang.'
-                })
-            });
-        });
+        //     $('.swalDefaultSuccess').click(function() {
+        //         Toast.fire({
+        //             icon: 'success',
+        //             title: 'Data Berhasil DItambah Di Keranjang.'
+        //         })
+        //     });
+        // });
     </script>
+	

@@ -8,6 +8,7 @@ class Belanja extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_transaksi');
+        $this->load->model('m_barang');
     }
 
     public function index()
@@ -26,6 +27,11 @@ class Belanja extends CI_Controller
     public function add()
     {
         $redirect_page = $this->input->post('redirect_page');
+		$barang = $this->m_barang->get_data($this->input->post('id'));
+		if($_POST['qty'] > $barang->{'stok_'.strtolower($_POST['ukuran'])}) {
+			$this->session->set_flashdata('error', 'Kuantity melebihi batas!');
+			redirect($redirect_page, 'refresh');
+		}
 
         foreach ($this->cart->contents() as $items) {
             if($items['ukuran'] == $this->input->post('ukuran') && $items['product_id'] == $this->input->post('id')){
@@ -33,6 +39,7 @@ class Belanja extends CI_Controller
                     'rowid' => $items['rowid'],
                     'qty' => $items['qty'] + $this->input->post('qty')
                 ]);
+				$this->session->set_flashdata('success', 'Keranjang Berhasil di Update!');
                 redirect($redirect_page, 'refresh');
             }
         }
@@ -46,7 +53,7 @@ class Belanja extends CI_Controller
             'name'          => $this->input->post('name'),
         );
         $this->cart->insert($data);
-        // dd($this->cart->contents());
+		$this->session->set_flashdata('success', 'Keranjang Berhasil di Update!');
         redirect($redirect_page, 'refresh');
     }
 
