@@ -2,7 +2,7 @@
 
 class M_auth extends CI_Model
 {
-    public function login_user($username, $password)
+    public function login_user($username, $password, $type = null)
     {
         $this->db->select('*');
         $this->db->from('tbl_user');
@@ -22,7 +22,11 @@ class M_auth extends CI_Model
 					redirect('admin');
 				}
 				$this->session->set_flashdata('error','email atau password salah');
-				redirect('auth/login_user');
+				if($type == 'pelanggan') {
+					redirect('pelanggan/login');
+				} else {
+					redirect('auth/login_user');
+				}
     }
 
     public function login_pelanggan($email, $password)

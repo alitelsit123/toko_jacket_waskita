@@ -24,7 +24,7 @@ class Pelanggan_login
             $this->ci->session->set_userdata('email', $email);
             redirect('home');
         }else{
-						$cek = $this->ci->m_auth->login_user($email, $password);
+						$cek = $this->ci->m_auth->login_user($email, $password, 'pelanggan');
 						if($cek) {
 							$id_pelanggan = $cek->id_user;
 							$nama_pelanggan = $cek->nama_user;
