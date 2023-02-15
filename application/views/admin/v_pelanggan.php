@@ -56,8 +56,8 @@
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <a href="<?= base_url('pelanggan/delete/' . $value->id_pelanggan)?>" class="btn btn-primary">Delete</a>
+                    <a href="<?= base_url('pelanggan/delete/' . $value->id_pelanggan)?>" class="btn btn-danger">Delete</a>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Kembali</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -65,7 +65,7 @@
         <!-- /.modal-dialog -->
     </div>
 <?php } ?>
-
+ <!-- /.modal-edit -->
 <?php foreach ($pelanggan as $key => $value) { ?>
     <div class="modal fade" id="edit<?= $value->id_pelanggan ?>">
         <div class="modal-dialog">
@@ -99,8 +99,8 @@
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
 
                 <?php

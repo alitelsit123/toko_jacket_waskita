@@ -53,8 +53,8 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                 <a href="<?= base_url('admin') ?>" class="btn btn-danger btn-sm">Kembali</a>
+                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
             </div>
 
             <?php echo form_close() ?>

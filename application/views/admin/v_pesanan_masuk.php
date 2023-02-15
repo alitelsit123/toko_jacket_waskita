@@ -34,13 +34,12 @@
                 <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
                     <table class="table">
                         <tr>
-                            <th>Informasi</th>
+                            <th>Informasi Barang</th>
                             <th>No order</th>
                             <th>Tanggal</th>
                             <th>Expedisi</th>
-                            <th>Informasi</th>
+                            <th>Informasi Penerima</th>
                             <th>Total Bayar</th>
-                            <th>Action</th>
                         </tr>
                         <?php foreach ($pesanan as $key => $value) { ?>
                             <tr>
@@ -98,11 +97,11 @@
                 <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
                     <table class="table">
                         <tr>
-                            <th>Informasi</th>
+                            <th>Informasi Barang</th>
                             <th>No order</th>
                             <th>Tanggal</th>
                             <th>Expedisi</th>
-                            <th>Informasi</th>
+                            <th>Informasi Penerima</th>
                             <th>Total Bayar</th>
                             <th>Action</th>
                         </tr>
@@ -160,15 +159,30 @@
                 <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
                     <table class="table">
                         <tr>
+                            <th>Informasi Barang</th>
                             <th>No order</th>
                             <th>Tanggal</th>
                             <th>Expedisi</th>
-                            <th>Informasi</th>
+                            <th>Informasi Penerima</th>
                             <th>Total Bayar</th>
                             <th>No Resi</th>
                         </tr>
                         <?php foreach ($pesanan_dikirim as $key => $value) { ?>
                             <tr>
+                            <?php
+                                $details = $this->db
+                                    ->join('tbl_barang', 'tbl_barang.id_barang=tbl_rinci_transaksi.id_barang')
+                                    ->get_where('tbl_rinci_transaksi', ['no_order' => $value->no_order])->result_array();
+                                // var_dump($details);
+                                ?>
+                                <td>
+                                    <?php foreach ($details as $d) : ?>
+                                        <p>Barang : <?= $d['nama_barang'] ?></p>
+                                        <p>Jumlah : <?= $d['qty'] ?></p>
+                                        <p>Ukuran : <?= $d['ukuran'] ?></p>
+                                        <hr>
+                                    <?php endforeach; ?>
+                                </td>
                                 <td><?= $value->no_order ?></td>
                                 <td><?= $value->tgl_order ?></td>
                                 <td>
@@ -201,6 +215,7 @@
                 <div class="tab-pane fade" id="custom-tabs-four-settings" role="tabpanel" aria-labelledby="custom-tabs-four-settings-tab">
                     <table class="table">
                         <tr>
+                            <th>Informasi Barang</th>
                             <th>No order</th>
                             <th>Tanggal</th>
                             <th>Expedisi</th>
@@ -209,6 +224,21 @@
                         </tr>
                         <?php foreach ($pesanan_selesai as $key => $value) { ?>
                             <tr>
+                                <tr>
+                                <?php
+                                $details = $this->db
+                                    ->join('tbl_barang', 'tbl_barang.id_barang=tbl_rinci_transaksi.id_barang')
+                                    ->get_where('tbl_rinci_transaksi', ['no_order' => $value->no_order])->result_array();
+                                // var_dump($details);
+                                ?>
+                                <td>
+                                    <?php foreach ($details as $d) : ?>
+                                        <p>Barang : <?= $d['nama_barang'] ?></p>
+                                        <p>Jumlah : <?= $d['qty'] ?></p>
+                                        <p>Ukuran : <?= $d['ukuran'] ?></p>
+                                        <hr>
+                                    <?php endforeach; ?>
+                                </td>
                                 <td><?= $value->no_order ?></td>
                                 <td><?= $value->tgl_order ?></td>
                                 <td>

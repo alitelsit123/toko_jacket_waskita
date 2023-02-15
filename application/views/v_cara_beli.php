@@ -35,7 +35,7 @@
                                 <tr>
                                     <td>
                                         <blockquote>
-                                            <p><img alt="1" src="../assets/Angka/1.png" width="50" height="67"></p>
+                                            <p><img alt="1" src="../assets/Angka/1.png" width="30" height="37"></p>
                                         </blockquote>
                                     </td>
                                     <td>
@@ -45,7 +45,7 @@
                                 <tr>
                                     <td>
                                         <blockquote>
-                                            <p><img alt="step 2" src="../assets/Angka/2.png" width="50" height="67" border="0" /></p>
+                                            <p><img alt="step 2" src="../assets/Angka/2.png" width="30" height="37" border="0" /></p>
                                         </blockquote>
                                     </td>
                                     <td>
@@ -55,7 +55,7 @@
                                 <tr>
                                     <td>
                                         <blockquote>
-                                            <p><img alt="step 3" src="../assets/Angka/3.png" width="50" height="67" border="0" /></p>
+                                            <p><img alt="step 3" src="../assets/Angka/3.png" width="30" height="37" border="0" /></p>
                                         </blockquote>
                                     </td>
                                     <td>
@@ -65,7 +65,7 @@
                                 <tr>
                                     <td>
                                         <blockquote>
-                                            <p><img alt="step 3" src="../assets/Angka/4.png" width="50" height="67" border="0" /></p>
+                                            <p><img alt="step 3" src="../assets/Angka/4.png" width="30" height="37" border="0" /></p>
                                         </blockquote>
                                     </td>
                                     <td>
@@ -74,7 +74,7 @@
                                 </tr>
                                 <td>
                                     <blockquote>
-                                        <p><img alt="step 3" src="../assets/Angka/5.png" width="50" height="67" border="0" /></p>
+                                        <p><img alt="step 3" src="../assets/Angka/5.png" width="30" height="37" border="0" /></p>
                                     </blockquote>
                                 </td>
                                 <td>

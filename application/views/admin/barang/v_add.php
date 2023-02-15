@@ -20,7 +20,8 @@
             }
             
             echo form_open_multipart('barang/add') ?>
-            <div class="col-sm-12">
+            <div class="row">
+            <div class="col-sm-6">
                 <!-- text input -->
                 <div class="form-group">
                     <label>Nama Barang</label>
@@ -28,7 +29,8 @@
                                                                                                     set_value('nama_barang') ?>">
                 </div>
             </div>
-                <div class="col-sm-4">
+            
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Harga</label>
@@ -36,7 +38,7 @@
                                                                                                     set_value('harga') ?>">
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Total Stok</label>
@@ -44,28 +46,28 @@
                     </div>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size S</label>
                         <input type="number" name="stok_s" class="form-control" placeholder="Stok Size S" value=" <?= set_value('stok_s') ?> ">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size M</label>
                         <input type="number" name="stok_m" class="form-control" placeholder="Stok Size M" value=" <?= set_value('stok_m') ?> ">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size L</label>
                         <input type="number" name="stok_l" class="form-control" placeholder="Stok Size L" value=" <?= set_value('stok_l') ?> ">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size XL</label>
@@ -73,23 +75,28 @@
                     </div>
                 </div>
                 
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Berat (Gr)</gr></label>
                         <input type="number" min="0" name="berat" class="form-control" placeholder="Berat Dalam Satuan Gram" value="<?= set_value('berat') ?>">
                     </div>
                 </div>
+                </div>
             </div>
             <div class="form-group">
+                <div class="col-sm-12">
                 <label>Deskripsi</label>
                 <textarea name="deskripsi" class="form-control" rows="10" placeholder="Deskripsi Barang"><?= set_value('deskripsi') ?></textarea>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label>Gambar</label>
-                        <input name="gambar" type="file" class="form_control" id="preview_gambar" required>
+                        <div class="col-sm-6">
+                            <label>Gambar</label>
+                            <input name="gambar" type="file" class="form_control" id="preview_gambar" required>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -99,17 +106,15 @@
                 </div>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                <a href="<?= base_url('barang') ?>" class="btn btn-danger btn-sm">Kembali</a>
+                <div class="col-md-12">
+                    <a href="<?= base_url('barang') ?>" class="btn btn-danger btn-sm">Kembali</a>
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                </div>
             </div>
-
             <?php echo form_close() ?>
-
-
         </div>
     </div>
 </div>
-
 <script>
     function bacaGambar(input) {
         if (input.files && input.files[0] ) {

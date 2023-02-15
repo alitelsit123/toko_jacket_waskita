@@ -37,21 +37,19 @@
 
                      <a class="nav-link" href="<?= base_url('pelanggan/login') ?>">
                          <span class="brand-text font-weight-light">Login/Register</span>
-                         <img src="<?= base_url() ?>template/dist/img/user1-128x128.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                      </a>
 
                  <?php } else { ?>
 
                      <a class="nav-link" data-toggle="dropdown" href="#">
                          <span class="brand-text font-weight-light"><?= $this->session->userdata('nama_pelanggan') ?></span>
-                         <img src="<?= base_url() ?>template/dist/img/user1-128x128.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                      </a>
 
                      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                         <div class="dropdown-divider"></div>
+                         <!-- <div class="dropdown-divider"></div>
                          <a href="<?= base_url('pelanggan/akun') ?>" class="dropdown-item">
                              <i class="fas fa-shopping-cart mr-2"></i> Akun saya
-                         </a>
+                         </a> -->
                          <div class="dropdown-divider"></div>
                          <a href="<?= base_url('pesanan_saya') ?>" class="dropdown-item">
                              <i class="fas fa-shopping-cart mr-2"></i> Pesanan saya

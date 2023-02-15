@@ -58,8 +58,8 @@
             </div>
 
             <div class="form-group">
+                <button href="<?= base_url('gambarbarang') ?>" class="btn btn-default btn-sm">Kembali</button>
                 <button class="btn btn-primary btn-sm" type="submit">Simpan</button>
-                <button href="<?= base_url('gambarbarang') ?>" class="btn btn-succes btn-sm">Kembali</button>
             </div>
 
             <?php echo form_close() ?>
@@ -69,7 +69,7 @@
                 <?php foreach ($gambar as $key => $value) { ?>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <img src="<?= base_url('assets/gambarbarang/' . $value->gambar) ?>" id="gambar_load" width="250px" height="200px">
+                            <img src="<?= base_url('assets/gambarbarang/' . $value->gambar) ?>" id="gambar_load" width="250px" height="250px">
                         </div>
                         <p>ket : <?= $value->ket ?></p>
                         <button class="btn btn-danger btn-xs btn-block" data-toggle="modal" data-target="#delete<?= $value->id_gambar ?>"><i class="fas fa-trash"></i>Delete</button>
@@ -96,14 +96,14 @@
                 <div class="modal-body text-center" >
 
                     <div class="form-group">
-                        <img src="<?= base_url('assets/gambarbarang/' . $value->gambar) ?>" id="gambar_load" width="250px" height="200px">
+                        <img src="<?= base_url('assets/gambarbarang/' . $value->gambar) ?>" id="gambar_load" width="250px" height="250px">
                     </div>
                     <h5>Apakah anda yakin ingin menghapus gambar ini !!</h5>
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <a href="<?= base_url('gambarbarang/delete/'. $value->id_barang .'/'. $value->id_gambar) ?>" class="btn btn-primary">Delete</a>
+                    <a href="<?= base_url('gambarbarang/delete/'. $value->id_barang .'/'. $value->id_gambar) ?>" class="btn btn-danger">Delete</a>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
             <!-- /.modal-content -->

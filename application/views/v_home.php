@@ -3,8 +3,7 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -46,13 +45,16 @@
                     echo form_hidden('price', $value->harga);
                     echo form_hidden('name', $value->nama_barang);
                     echo form_hidden('redirect_page', str_replace('index.php,','',current_url()));
-                    
+        
                     ?>
                     <div class="card bg-light">
                         <div class="card-body pt-0">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" width="300px" height="250px">
+                                <a href="<?= base_url('home/detail_barang/' . $value->id_barang) ?>" >
+                                <img src="<?= base_url('assets/gambar/' . $value->gambar) ?>" width="300px" height="300px">
+                                        </a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -66,11 +68,8 @@
                                 <div class="col-sm-6">
                                     <div class="text-right">
                                         <a href="<?= base_url('home/detail_barang/' . $value->id_barang) ?>" class="btn btn-sm btn-primary ">
-                                            <i class="fas fa-eye"></i>
+                                            <h7>Detail</h7> 
                                         </a>
-                                        <!-- <button type="submit" class="btn btn-sm btn-primary swalDefaultSuccess">
-                                            <i class="fas fa-cart-plus"></i> Add
-                                        </button> -->
                                     </div>
                                 </div>
                             </div>

@@ -20,58 +20,58 @@
             }
             
             echo form_open_multipart('barang/edit/'. $barang->id_barang) ?>
-            <div class="col-sm-12">
+                <div class ="row">
+            <div class="col-sm-6">
                 <!-- text input -->
                 <div class="form-group">
                     <label>Nama Barang</label>
                     <input name="nama_barang" class="form-control" placeholder="nama Barang" value="<?= $barang->nama_barang ?>">
                 </div>
+
             </div>
-            <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Harga</label>
                         <input name="harga" class="form-control" placeholder="Harga Barang" value=" <?= $barang->harga ?> ">
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Total Stok</label>
                         <input name="total_stok" class="form-control" placeholder="Stok Barang" value=" <?= $barang->total_stok ?> ">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size S</label>
                         <input name="stok_s" class="form-control" placeholder="Stok Size S" value=" <?= $barang->stok_s ?> ">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size M</label>
                         <input name="stok_m" class="form-control" placeholder="Stok Size M" value=" <?= $barang->stok_m ?> ">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size L</label>
                         <input name="stok_l" class="form-control" placeholder="Stok Size L" value=" <?= $barang->stok_l ?> ">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Stok Size XL</label>
                         <input name="stok_xl" class="form-control" placeholder="Stok Size XL" value=" <?= $barang->stok_xl ?> ">
                     </div>
                 </div>
-                
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Berat (Gr)</gr></label>
@@ -98,8 +98,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                 <a href="<?= base_url('barang') ?>" class="btn btn-danger btn-sm">Kembali</a>
+                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
             </div>
 
             <?php echo form_close() ?>

@@ -1,16 +1,12 @@
 </div>
 
 </div>
-
-
 <!-- Main Footer -->
 <footer class="main-footer">
   <!-- To the right -->
   <div class="container">
             <div class="row">
-
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-sm-6">
                     <div class="footer-about">
                         <div class="footer-logo">
                             <a href="#"><img src="img/footer-logo.png" alt=""></a>
@@ -19,35 +15,16 @@
                         <a href="#"><img src="img/payment.png" alt=""></a>
                     </div>
                 </div>
-
-                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                <div class="col-sm-6 text-right">
                     <div class="footer-widget">
-                        <h6><a style="color: black" href="#">Tentang Kami</a></h6>
+                      <a href="<?= base_url('home/kontak') ?> ">Kontak :</a>
+                      <a href="https://facebook.com" class="fa fa-facebook"></a>
+                      <a href="https://www.instagram.com/konkritemarket/" class="fa fa-instagram"></a>
+                      <a href="https://wa.me/6281226931073" class="fa fa-Whatsapp"></a>
                     </div>
                 </div>
-
-                <div class="col-lg-2  col-md-3 col-sm-6">
-                    <div class="footer-widget">
-                        <h6 style="color: black">Hubungi Kami : </h6>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-                    <div class="footer-widget">
-                    <a href="https://facebook.com" class="fa fa-facebook"></a>
-                    <a href="https://instagram.com" class="fa fa-instagram"></a>
-                        
-
-                    </div>
-                </div>
-
-
             </div>
-
-
         </div>
-  
-
   <div class="col-md-4">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,7 +33,7 @@
     <style>
       
 
-      .fa-facebook {
+      /* .fa-facebook {
 
         padding: 10px;
         font-size: 30px;
@@ -80,6 +57,18 @@
         background: #125688;
         color: white;
       }
+
+      .fa-whatsapp {
+        padding: 10px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+        background: #125688;
+        color: white;
+      } */
     </style>
   </div>
 

@@ -54,18 +54,19 @@
 <body>
     <main style="margin-top: 100px;">
         <div class="container">
-            <a target="_blank" href="https://wa.me/6287734250835">
+            <a target="_blank" href="https://wa.me/6281226931073">
                 <div class="callout callout-danger">
-                    Whatsapp &nbsp;&nbsp;&nbsp;: <b>08122
-                    </b>
+                    Whatsapp &nbsp;&nbsp;&nbsp;: <b>081226931073</b>
                 </div>
             </a>
-            <div class="callout callout-info">
-                Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <b>KonkriteMarket@gmail.com</b>
-            </div>
-            <a target="_blank" href="https://instagram.com">
-                <div class="callout callout-warning">
-                    Instagram &nbsp;&nbsp;: <b>@KonkriteMarket</b>
+            <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox?compose=new">
+                <div class="callout callout-danger">
+                    Email &nbsp;&nbsp;: <b>KonkriteMarket@gmail.com</b>
+                </div>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/konkritemarket/">
+                <div class="callout callout-danger">
+                    Instagram &nbsp;&nbsp;: <b>KonkriteMarket</b>
                 </div>
             </a>
             <a target="_blank" href="https://facebook.com">

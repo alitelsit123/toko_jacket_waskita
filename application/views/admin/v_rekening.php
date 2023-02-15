@@ -2,13 +2,14 @@
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Data Rekening</h3>
-            <!-- /.card-tools -->
-        </div>
-
-        <div class="card-tools">
+            <div class="card-tools">
                 <button class="btn btn-default" data-toggle="modal" data-target="#add" type="button" class="btn btn-primary btn-xs"><i class="fas fa-plus"></i>
                     add</button>
             </div>
+            <!-- /.card-tools -->
+        </div>
+
+        
         <!-- /.card-header -->
         <div class="card-body">
 
@@ -17,9 +18,9 @@
                 <thead>
                     <tr class="text-center">
                         <th class="text-center">No</th>
-                        <th class="text-center">Nama Pelanggan</th>
-                        <th class="text-center">Email</th>
-                        <th class="text-center">Password</th>
+                        <th class="text-center">Nama Bank</th>
+                        <th class="text-center">No Rekening</th>
+                        <th class="text-center">Atas Nama</th>
                         <th class="text-center">Action</th>
                     </tr>
                 </thead>
@@ -158,8 +159,8 @@
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <a href="<?= base_url('rekening/delete/' . $value->id_rekening)?>" class="btn btn-primary">Delete</a>
+                    <a href="<?= base_url('rekening/delete/' . $value->id_rekening)?>" class="btn btn-danger">Delete</a>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
             <!-- /.modal-content -->
